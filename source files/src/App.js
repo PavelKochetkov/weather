@@ -17,11 +17,11 @@ const App = () => {
     useEffect(() => {
       const fetchData = async () => {
       const response = await axios.get(`${api.url}forecast?q=Vladimir&lang=ru&units=metric&APPID=${api.id}`)
-      const dailyDataMorning = response.data.list.filter(read => read.dt_txt.includes('06:00:00'))
+      const dailyDataMorning = response.data.list.filter(read => read.dt_txt.includes('09:00:00'))
       setWeatherMorning(dailyDataMorning)
-      const dailyDataDaytime = response.data.list.filter(read => read.dt_txt.includes('12:00:00'))
+      const dailyDataDaytime = response.data.list.filter(read => read.dt_txt.includes('15:00:00'))
       setWeatherDaytime(dailyDataDaytime)
-      const dailyDataEvening = response.data.list.filter(read => read.dt_txt.includes('21:00:00'))
+      const dailyDataEvening = response.data.list.filter(read => read.dt_txt.includes('00:00:00'))
       setWeatherEvening(dailyDataEvening)
       }
       fetchData()
