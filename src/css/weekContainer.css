@@ -6,7 +6,7 @@
     border-radius: 10px;
     box-shadow: 1px 2px 2px 1px black;
     transform: translateX(-1000%);
-    animation: appearance forwards 4s ;
+    animation: appearance forwards 4s;
 }
 
 @keyframes appearance {

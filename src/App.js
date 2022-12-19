@@ -20,9 +20,6 @@ const App = () => {
   }
   const clearData = (e) => {
     setCity('')
-    setWeatherMorning([])
-    setWeatherDaytime([])
-    setWeatherEvening([])
   }
   const search = event => {
     if (event.key === 'Enter') {

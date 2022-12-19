@@ -72,3 +72,20 @@
     height: 50px;
   }
 }
+
+@media (max-width: 469px) {
+  .App {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    position: absolute;
+  }
+  .head {
+    font-size: 20px;
+    height: 50px;
+    min-width: 100vh;
+  }
+  .day, .evening, .morning {
+    min-width: 100vh;
+  }
+}
