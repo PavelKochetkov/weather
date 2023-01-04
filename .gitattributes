@@ -1,2 +1,2 @@
-*.js linguist-detectable
+static/css/*.css linguist-detectable
 *.html linguist-documentation
