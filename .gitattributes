@@ -1,3 +1,2 @@
-static/css/*.css -linguist-detectable
-static/js/*.js -linguist-detectable
+static/** linguist-vendored
 *.html linguist-documentation
