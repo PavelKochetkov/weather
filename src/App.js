@@ -30,6 +30,8 @@ const App = () => {
         catch {
           alert('Неверное имя города')
         }
+
+        console.log(response.data)
         const cityName = response.data.city.name 
           setCity(cityName)
         const dailyDataMorning = response.data.list.filter(read => read.dt_txt.includes('06:00:00'))
@@ -40,6 +42,7 @@ const App = () => {
           setWeatherEvening(dailyDataEvening)
       }
       fetchData()
+      
     }
   }
     return (
