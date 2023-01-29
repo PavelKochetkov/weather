@@ -18,7 +18,7 @@ const App = () => {
   const validate = (e) => {
     e.target.value = e.target.value.replace(/[0-9]/g, '')
   }
-  const clearData = (e) => {
+  const clearData = () => {
     setCity('')
   }
   const search = event => {
@@ -30,19 +30,12 @@ const App = () => {
         catch {
           alert('Неверное имя города')
         }
-
-        console.log(response.data)
-        const cityName = response.data.city.name 
-          setCity(cityName)
-        const dailyDataMorning = response.data.list.filter(read => read.dt_txt.includes('06:00:00'))
-          setWeatherMorning(dailyDataMorning)
-        const dailyDataDaytime = response.data.list.filter(read => read.dt_txt.includes('12:00:00'))
-          setWeatherDaytime(dailyDataDaytime)
-        const dailyDataEvening = response.data.list.filter(read => read.dt_txt.includes('18:00:00'))
-          setWeatherEvening(dailyDataEvening)
+        setCity(response.data.city.name)
+        setWeatherMorning(response.data.list.filter(read => read.dt_txt.includes('06:00:00')))
+        setWeatherDaytime(response.data.list.filter(read => read.dt_txt.includes('12:00:00')))
+        setWeatherEvening(response.data.list.filter(read => read.dt_txt.includes('18:00:00')))
       }
       fetchData()
-      
     }
   }
     return (
