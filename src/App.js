@@ -6,7 +6,7 @@ import { useState } from "react"
 
 const api = {
   key: '65fdf2698bc46edde145bb0b8b52cbf8',
-  url: 'https://api.openweathermap.org/data/2.5/'
+  url: 'http://api.openweathermap.org/data/2.5/'
 }
 
 const App = () => {
